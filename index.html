@@ -243,28 +243,28 @@
                 <h2>PowerShell</h2>
             </header>
             <div class="conteudoArtigo">
-                https://www.howtogeek.com/50236/customizing-your-powershell-profile/
-                https://pt.stackoverflow.com/questions/220078/o-que-significa-o-erro-execu%C3%A7%C3%A3o-de-scripts-foi-desabilitada-neste-sistema/220087
-
-                Function acompanharLog {ssh root@0.0.0.0 tail -f
-                /caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log}
-                powershell -ExecutionPolicy RemoteSigned
-
-                #JBossHomolog
-                Function acompanharlog {ssh root@0.0.0.0 tail -f
-                /caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log}
-                Function baixarlog {pscp root@0.0.0.0:/caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log
-                C:/Dev/temp/log; start C:/Dev/temp/log;}
-
-                #GIT
-                Function gs {git status}
-                Function gf {git fetch}
-                Function gfs {git fetch; git status}
-                Function projetos {cd C:/Dev/GitLab}
-
-                #Maven
-                Function installcore {mvn -T 4 install -o -DskipTests -Dmaven.generate.sources=false
-                -Dmaven.test.skip=true -pl core -am}
+                https://www.howtogeek.com/50236/customizing-your-powershell-profile/<br>
+                https://pt.stackoverflow.com/questions/220078/o-que-significa-o-erro-execu%C3%A7%C3%A3o-de-scripts-foi-desabilitada-neste-sistema/220087<br>
+<br>
+                Function acompanharLog {ssh root@0.0.0.0 tail -f<br>
+                /caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log}<br>
+                powershell -ExecutionPolicy RemoteSigned<br>
+<br>
+                #JBossHomolog<br>
+                Function acompanharlog {ssh root@0.0.0.0 tail -f<br>
+                /caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log}<br>
+                Function baixarlog {pscp root@0.0.0.0:/caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log<br>
+                C:/Dev/temp/log; start C:/Dev/temp/log;}<br>
+<br>
+                #GIT<br>
+                Function gs {git status}<br>
+                Function gf {git fetch}<br>
+                Function gfs {git fetch; git status}<br>
+                Function projetos {cd C:/Dev/GitLab}<br>
+<br>
+                #Maven<br>
+                Function installcore {mvn -T 4 install -o -DskipTests -Dmaven.generate.sources=false<br>
+                -Dmaven.test.skip=true -pl core -am}<br>
             </div>
         </article>
     </section>

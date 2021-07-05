@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Usar lib CSS de https://www.w3schools.com/w3css/default.asp -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="A simple HTML5 page with my commands for everyday usage.">
+    <meta name="author" content="Lucas">
+    <title>Comandos</title>
+</head>
+
+<body>
+<header id="meuHeader" class="meuHeader basicMarginBottom">
+    <nav>
+        <ul style="width: 250px;">
+            <li><a href="#bashSection">Bash</a></li> <!--Usar o # para linkar na própria página -->
+            <li><a href="#gitSection">Git</a></li>
+            <li><a href="#powerShellSection">PowerShell</a></li>
+            <li><a href="#mavenSection">Maven</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="conteudo">
+    <section id="bashSection">
+        <article>
+            <header>
+                <h2>Bash</h2>
+            </header>
+            <div class="conteudoArtigo" style="height: 2000px;">
+
+            </div>
+        </article>
+    </section>
+
+    <section id="gitSection" class="basicPaddingTop">
+        <article>
+            <header><h2>Git</h2></header>
+            <div class="conteudoArtigo">
+                <code>git restore .</code><br>
+                <code>git stash -u -m "Tarefa17918_Margem, Tarefa17856_ValorMinParcela."</code><br>
+                <code>git stash -u -k -m "Tarefa17918_Margem, Tarefa17856_ValorMinParcela Merged com
+                    v13.0.1."</code><br>
+                <code>git stash push -u -m "Tarefa17918 concluída, anexar às mudanças da Tarefa17856."</code><br>
+                Saved working directory and index state WIP on v12.0: dca4391a Correção do bug ao atribuir Concorrência
+                na tela de cadastro de RegraItem e tentar avançar para a próxima tela.<br>
+                <br>
+                Clonar uma branch específica<br>
+                <code>git clone --branch release/v12.0 https://dev@bitbucket.org/dir/meuRepositorio.git</code><br>
+                <br>
+                Copia um commit para a branch atual<br>
+                <code>git cherry-pick -n %hashdocommit%</code><br>
+                <code>git cherry-pick fc205322ae1553889650e102a31baf5767fe3284 --no-commit</code><br>
+                <br>
+                <code>git checkout -b release/v12.0.1</code><br>
+                <br>
+                Restaura para o último commit<br>
+                <code>git reset --hard</code><br>
+                <br>
+                Remove untracked files from the working tree<br>
+                <code>git clean -f -d</code><br>
+                <br>
+                <code>git fetch origin && git reset --hard origin/develop && git clean -f -d</code><br>
+                <br>
+                diverged?<br>
+                <code>git pull --rebase</code><br>
+                <br>
+                Mostrar arquivos no commit -
+                https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit<br>
+                <code>git diff-tree --no-commit-id --name-only -r bd61ad98</code><br>
+                <br>
+            </div>
+        </article>
+    </section>
+
+    <section id="mavenSection">
+        <article>
+            <header>
+                <h2>Maven</h2>
+            </header>
+            <div class="conteudoArtigo" style="height: 2000px;">
+
+            </div>
+        </article>
+    </section>
+
+    <section id="powerShellSection">
+        <article>
+            <header>
+                <h2>PowerShell</h2>
+            </header>
+            <div class="conteudoArtigo" style="height: 2000px;">
+
+            </div>
+        </article>
+    </section>
+</div>
+
+<footer>
+    <p>...</p>
+</footer>
+</body>
+</html>

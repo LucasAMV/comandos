@@ -13,7 +13,8 @@
 <header id="meuHeader" class="meuHeader basicMarginBottom">
     <nav>
         <ul style="width: 250px;">
-            <li><a href="#bashSection">Bash</a></li> <!--Usar o # para linkar na própria página -->
+            <li><a href="#linuxSection">Linux</a></li>
+            <li><a href="#bashSection">Bash</a></li>
             <li><a href="#gitSection">Git</a></li>
             <li><a href="#powerShellSection">PowerShell</a></li>
             <li><a href="#mavenSection">Maven</a></li>
@@ -22,13 +23,114 @@
 </header>
 
 <div id="conteudo">
+    <section id="linuxSection">
+        <article>
+            <header>
+                <h2>Linux</h2>
+            </header>
+            <div class="conteudoArtigo">
+                Criar minhas variáveis do sistema:<br>
+                Gerar o arquivo /etc/profile.d/ambienteDev.sh<br>
+                Conteúdo:<br>
+                export JAVA_HOME=/home/lucas/Dev/Java/JDK/jdk1.8.0_261_64bits<br>
+                export PATH=$PATH:$JAVA_HOME/bin<br>
+                <br>
+                export M2_HOME=/home/lucas/Dev/Maven-3.6.3<br>
+                export PATH=$PATH:$M2_HOME/bin<br>
+            </div>
+        </article>
+        <br>
+        <article>
+            <div class="conteudoArtigo">
+                Restart GNOME<br>
+                Alt+F2 > digitar ‘r’ sem aspas e dar enter<br>
+            </div>
+        </article>
+        <br>
+        <article>
+            <div class="conteudoArtigo">
+                Compartilhar arquivos Linux<br>
+                https://www.howtogeek.com/176471/how-to-share-files-between-windows-and-linux/<br>
+                <br>
+                sudo apt-get install samba<br>
+                smbpasswd -a lucas<br>
+                sudo gedit /etc/samba/smb.conf<br>
+                sudo service smbd restart<br>
+                sudo service smbd status<br>
+                sudo service smbd stop<br>
+                <br>
+                [&lt;folder_name>]<br>
+                path = /home/&lt;user_name>/&lt;folder_name><br>
+                available = yes<br>
+                valid users = lucas<br>
+                read only = no<br>
+                browsable = yes<br>
+                public = yes<br>
+                writable = yes<br>
+                <br>
+                [LAN-Share]<br>
+                path = /home/lucas/LAN-Share<br>
+                available = yes<br>
+                valid users = lucas<br>
+                read only = no<br>
+                browsable = yes<br>
+                public = yes<br>
+                writable = yes<br>
+                <br>
+                sudo service smbd restart<br>
+            </div>
+        </article>
+        <br> <!-- TODO Substituir por margin -->
+        <article>
+            <div class="conteudoArtigo">
+                Local do IntelliJ no Linux:<br>
+                /home/lucas/.local/share/flatpak/app/com.jetbrains.IntelliJ-IDEA-Community/x86_64/stable/ea0864ef608a13d271f86fe0691e30930d0978bda461c2e17063e778570720ef/files/idea-IC/bin<br>
+            </div>
+        </article>
+    </section>
+
     <section id="bashSection">
         <article>
             <header>
                 <h2>Bash</h2>
             </header>
-            <div class="conteudoArtigo" style="height: 2000px;">
+            <div class="conteudoArtigo">
+                fconstruirDeploy() {
+                echo "Clean"
+                mvn clean -q
+                echo "Compile"
+                mvn compile -T 2C -DskipTests
+                echo "Package"
+                mvn package -T 2C -DskipTests -Dmaven.javadoc.skip=true -P jcr-storage,nexus-tjmt-releases,TJMTDEV
+                echo "Fim"
+                }
 
+                mvn install -DskipTests -P TJMTDEV -pl pje-comum -am -o
+            </div>
+        </article>
+
+        <article>
+            <div class="conteudoArtigo">
+                NVidia Monitor<br>
+                watch -n -1 nvidia-smi<br>
+            </div>
+        </article>
+
+        <article>
+            <div class="conteudoArtigo">
+                https://stackoverflow.com/questions/16956810/how-do-i-find-all-files-containing-specific-text-on-linux<br>
+                <br>
+                Buscar dentro de arquivos no Linux<br>
+                grep -rilnw '/path/to/somewhere/' -e 'pattern'<br>
+                <br>
+                -r or -R is recursive,<br>
+                -n is line number, and<br>
+                -w stands for match the whole word.<br>
+                -l (lower-case L) can be added to just give the file name of matching files.<br>
+                -i stands for ignore case (optional in your case).<br>
+                <br>
+                Buscar por nome de arquivos<br>
+                find /home/username/ -name "*.err"<br>
             </div>
         </article>
     </section>
@@ -78,8 +180,59 @@
             <header>
                 <h2>Maven</h2>
             </header>
-            <div class="conteudoArtigo" style="height: 2000px;">
+            <div class="conteudoArtigo">
+<pre class="code">
+--Skip Test Compilation
+&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+    &lt;version&gt;3.7.0&lt;/version&gt;
+    &lt;configuration&gt;
+        &lt;source&gt;1.8&lt;/source&gt;
+        &lt;target&gt;1.8&lt;/target&gt;
+        &lt;compilerArgument&gt;-Xlint:sunapi&lt;/compilerArgument&gt;
+        &lt;compilerArgument&gt;-XDenableSunApiLintControl&lt;/compilerArgument&gt;
+    &lt;/configuration&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;id&gt;default-testCompile&lt;/id&gt;
+            &lt;phase&gt;test-compile&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;testCompile&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+                &lt;skip&gt;true&lt;/skip&gt;
+            &lt;/configuration&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+</pre>
 
+            </div>
+        </article>
+
+        <article>
+            <div class="conteudoArtigo">
+                https://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html<br>
+                https://mkyong.com/maven/how-to-run-unit-test-with-maven/<br>
+                <br>
+                # Run all the unit test classes.<br>
+                $ mvn test<br>
+                <br>
+                # Run a single test class.<br>
+                $ mvn -Dtest=TestApp1 test<br>
+                <br>
+                # Run multiple test classes.<br>
+                $ mvn -Dtest=TestApp1,TestApp2 test<br>
+                <br>
+                # Run a single test method from a test class.<br>
+                $ mvn -Dtest=TestApp1#methodname test<br>
+                <br>
+                # Run all test methods that match pattern 'testHello*' from a test class.<br>
+                $ mvn -Dtest=TestApp1#testHello* test<br>
+                <br>
+                # Run all test methods match pattern 'testHello*' and 'testMagic*' from a test class.<br>
+                $ mvn -Dtest=TestApp1#testHello*+testMagic* test<br>
             </div>
         </article>
     </section>
@@ -89,8 +242,29 @@
             <header>
                 <h2>PowerShell</h2>
             </header>
-            <div class="conteudoArtigo" style="height: 2000px;">
+            <div class="conteudoArtigo">
+                https://www.howtogeek.com/50236/customizing-your-powershell-profile/
+                https://pt.stackoverflow.com/questions/220078/o-que-significa-o-erro-execu%C3%A7%C3%A3o-de-scripts-foi-desabilitada-neste-sistema/220087
 
+                Function acompanharLog {ssh root@0.0.0.0 tail -f
+                /caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log}
+                powershell -ExecutionPolicy RemoteSigned
+
+                #JBossHomolog
+                Function acompanharlog {ssh root@0.0.0.0 tail -f
+                /caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log}
+                Function baixarlog {pscp root@0.0.0.0:/caminho/para/jboss/bin-7.1.1.Final/standalone/log/server.log
+                C:/Dev/temp/log; start C:/Dev/temp/log;}
+
+                #GIT
+                Function gs {git status}
+                Function gf {git fetch}
+                Function gfs {git fetch; git status}
+                Function projetos {cd C:/Dev/GitLab}
+
+                #Maven
+                Function installcore {mvn -T 4 install -o -DskipTests -Dmaven.generate.sources=false
+                -Dmaven.test.skip=true -pl core -am}
             </div>
         </article>
     </section>

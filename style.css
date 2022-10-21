@@ -44,7 +44,7 @@ code {
     line-height: 30px;
 }
 .conteudoArtigo {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 .basicMarginBottom {
     margin-bottom: 15px;
@@ -58,9 +58,40 @@ code {
     width: 100%;
     background: white;
 }
+
+h4 {
+    margin: 0px;
+}
+
+section {
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+article {
+    margin-left: 40px;
+}
+
 #conteudo {
     margin-top: 30px;
 }
 #conteudo section {
     padding-top: 20px;
+}
+#linuxSection {
+    background-color: black;
+    color: white;
+}
+
+#linuxSection header h2 {
+    color: #E95420;
+    margin-bottom: 10px;
+}
+
+.linuxCommand {
+    color: #E95420;
+}
+
+.linuxParam {
+    color: green;
 }

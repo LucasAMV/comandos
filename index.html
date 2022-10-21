@@ -24,32 +24,51 @@
 
 <div id="conteudo">
     <section id="linuxSection">
+        <header>
+            <h2>Linux</h2>
+        </header>
         <article>
             <header>
-                <h2>Linux</h2>
+                <h3>#Criar minhas variáveis do sistema:</h3>
             </header>
             <div class="conteudoArtigo">
-                Criar minhas variáveis do sistema:<br>
                 Gerar o arquivo /etc/profile.d/ambienteDev.sh<br>
                 Conteúdo:<br>
                 export JAVA_HOME=/home/lucas/Dev/Java/JDK/jdk1.8.0_261_64bits<br>
                 export PATH=$PATH:$JAVA_HOME/bin<br>
                 <br>
                 export M2_HOME=/home/lucas/Dev/Maven-3.6.3<br>
-                export PATH=$PATH:$M2_HOME/bin<br>
+                export PATH=$PATH:$M2_HOME/bin<br></div>
+        </article>
+        <br>
+        <article>
+            <header>
+                <h3>#Monitorar processos Linux</h3>
+            </header>
+            <div class="conteudoArtigo">
+                <span class="linuxCommand">top</span> <span class="linuxParam">-d 0.5 -e g -E g -o +%CPU</span><br>
+                +%MEM<br>
+                TIME+<br>
+                -d = Tempo de refresh em segundos<br>
+                -e e -E = Unidade de medida em K|M|G...<br>
+                -o = Campo de ordenação, + = Descrescente, - = Crescente.<br>
             </div>
         </article>
         <br>
         <article>
+            <header>
+                <h3>#Restart GNOME</h3>
+            </header>
             <div class="conteudoArtigo">
-                Restart GNOME<br>
                 Alt+F2 > digitar ‘r’ sem aspas e dar enter<br>
             </div>
         </article>
         <br>
         <article>
+            <header>
+                <h3>#Compartilhar arquivos Linux</h3>
+            </header>
             <div class="conteudoArtigo">
-                Compartilhar arquivos Linux<br>
                 https://www.howtogeek.com/176471/how-to-share-files-between-windows-and-linux/<br>
                 <br>
                 sudo apt-get install samba<br>
@@ -161,6 +180,10 @@
                 <br>
                 Remove untracked files from the working tree<br>
                 <code>git clean -f -d</code><br>
+                <br>
+                <br>
+                Clear local untracked branches (remove the option "dry-run" to work)<br>
+                <code>git remote prune --dry-run origin</code><br>
                 <br>
                 <code>git fetch origin && git reset --hard origin/develop && git clean -f -d</code><br>
                 <br>

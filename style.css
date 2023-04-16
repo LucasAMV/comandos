@@ -44,6 +44,12 @@ code {
     line-height: 30px;
 }
 .conteudoArtigo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
     margin-left: 20px;
 }
 .basicMarginBottom {
@@ -79,8 +85,8 @@ article {
     padding-top: 20px;
 }
 #linuxSection {
-    background-color: black;
-    color: white;
+    background-color: lightgray;
+    color: black;
 }
 
 #linuxSection header h2 {

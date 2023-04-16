@@ -34,11 +34,11 @@
             <div class="conteudoArtigo">
                 Gerar o arquivo /etc/profile.d/ambienteDev.sh<br>
                 Conteúdo:<br>
-                export JAVA_HOME=/home/lucas/Dev/Java/JDK/jdk1.8.0_261_64bits<br>
-                export PATH=$PATH:$JAVA_HOME/bin<br>
-                <br>
-                export M2_HOME=/home/lucas/Dev/Maven-3.6.3<br>
-                export PATH=$PATH:$M2_HOME/bin<br></div>
+                <code>export JAVA_HOME=/home/lucas/Dev/Java/JDK/jdk1.8.0_261_64bits</code>
+                <code>export PATH=$PATH:$JAVA_HOME/bin</code>
+                <code>export M2_HOME=/home/lucas/Dev/Maven-3.6.3</code>
+                <code>export PATH=$PATH:$M2_HOME/bin</code>
+            </div>
         </article>
         <br>
         <article>
@@ -46,7 +46,7 @@
                 <h3>#Monitorar processos Linux</h3>
             </header>
             <div class="conteudoArtigo">
-                <span class="linuxCommand">top</span> <span class="linuxParam">-d 0.5 -e g -E g -o +%CPU</span><br>
+                <span><span class="linuxCommand">top</span> <span class="linuxParam">-d 0.5 -e g -E g -o +%CPU</span></span><br>
                 +%MEM<br>
                 TIME+<br>
                 -d = Tempo de refresh em segundos<br>
@@ -194,6 +194,8 @@
                 https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit<br>
                 <code>git diff-tree --no-commit-id --name-only -r bd61ad98</code><br>
                 <br>
+                Mostra um Git graph com os ramos de branch --- https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
+                <code>git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all</code>
             </div>
         </article>
     </section>

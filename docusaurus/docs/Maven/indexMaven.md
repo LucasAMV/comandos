@@ -14,11 +14,11 @@ mvn deploy:deploy-file -DgroupId=br.com.site -DartifactId=pacote-ferramentas -Dv
 ```
 
 ```bash title="Analisa um projeto usando Sonarqube sem precisar instalar nele o plugin:"
-mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar -Dsonar.projectKey=project_key -Dsonar.projectName=projeto-goat -Dsonar.host.url=https://sonarqube.devcansado.com.br -Dsonar.token=algumToken
+mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar -Dsonar.projectKey=project_key -Dsonar.projectName=devcansado -Dsonar.host.url=https://sonarqube.devcansado.com.br -Dsonar.token=algumToken
 ```
 
 ```bash title="Variante do mesmo comando que especifica a jdk necessária pelo plugin:"
-JAVA_HOME=/home/devcansado/Dev/Java/jdk-17.0.2 mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar -Dsonar.projectKey=project_key -Dsonar.projectName=pje -Dsonar.host.url=https://sonarqube.devcansado.com.br -Dsonar.token=algumToken
+JAVA_HOME=/home/devcansado/Dev/Java/jdk-17.0.2 mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar -Dsonar.projectKey=project_key -Dsonar.projectName=devcansado -Dsonar.host.url=https://sonarqube.devcansado.com.br -Dsonar.token=algumToken
 ```
 
 ```bash title="Executa o Maven de uma imagem Docker. Evita usar root e reaproveita o repositório local do SO."

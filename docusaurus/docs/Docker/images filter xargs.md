@@ -1,3 +1,10 @@
+---
+sidebar_label: 'images --filter | xargs'
+#sidebar_position: 3
+---
+
+# images --filter | xargs
+
 Você pode encadear o comando `docker rmi` com o resultado do comando `docker images --filter "dangling=true" --format "{{.ID}}"` usando o comando `xargs`. O `xargs` pega a saída do comando anterior e a usa como argumento para o comando seguinte.
 
 ### Comando Completo:

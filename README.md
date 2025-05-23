@@ -3,7 +3,9 @@
 
 2. Recompile usando ```npm run build```
 
-3. Para atualizar o projeto apague da raiz as pastas:
+4. Teste com ```npm run serve```
+
+3. Para preparar o projeto para fazer push para origin apague da raiz as pastas:
    - assets
    - blog
    - docs
@@ -11,3 +13,5 @@
    - markdown-page
 
 4. Copie o conteúdo da pasta docusaurus/build para a raiz do projeto sobrescrevendo quando perguntado.
+
+5. Pronto para fazer push.

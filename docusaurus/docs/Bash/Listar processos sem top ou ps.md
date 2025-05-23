@@ -1,3 +1,8 @@
+---
+#sidebar_label: ''
+sidebar_position: 1
+---
+
 Sim, é possível obter os parâmetros da linha de comando (`cmdline`) que foram usados para iniciar um processo no Linux. Você pode fazer isso lendo o arquivo `cmdline` no diretório `/proc` correspondente ao PID do processo.
 
 ### Passos para Obter os Parâmetros do `cmdline`:

@@ -1,3 +1,10 @@
+---
+sidebar_label: 'images --filter'
+sidebar_position: 1
+---
+
+# images --filter
+
 Sim, o comando `docker images` possui o parâmetro `--filter`, que permite filtrar a lista de imagens com base em determinados critérios. Aqui estão alguns dos filtros disponíveis e como usá-los:
 
 ### Filtros Disponíveis:

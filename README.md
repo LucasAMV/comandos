@@ -3,7 +3,7 @@
 
 2. Recompile usando ```npm run build```
 
-4. Teste com ```npm run serve```
+4. Teste com ```npm run start --watch```
 
 3. Para preparar o projeto para fazer push para origin apague da raiz as pastas:
    - assets

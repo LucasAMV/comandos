@@ -14,7 +14,7 @@ git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(re
 ```
 
 ```bash title="Salva as modificações locais e novos arquivos untracked para o Stash."
- git stash push -u -m "[Task-17918] Commit inicial"
+ git stash push -u -m "[Task-123456] Commit inicial"
 ```
 
 ```bash title="Criar branch baseada na develop"  

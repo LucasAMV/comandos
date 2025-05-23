@@ -3,7 +3,7 @@
 sidebar_position: 1
 ---
 
-# Instalação do Samba
+# Instalação e Configuração
 
 [Tutorial oficial do Ubuntu](https://ubuntu.com/tutorials/install-and-configure-samba#2-installing-samba)
 
@@ -28,7 +28,7 @@ sudo nano /etc/samba/smb.conf
 ```bash title="Adicione no final do arquivo:"
 [SambaShare]
 comment = Samba on Ubuntu
-path = /home/lucas/SambaShare
+path = /home/devcansado/SambaShare
 read only = no
 browsable = yes
 ```

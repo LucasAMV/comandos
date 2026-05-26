@@ -6,3 +6,7 @@
 ```bash title="Lista portas TCP abertas"
 sudo lsof -iTCP -iUDP -sTCP:LISTEN -P
 ```
+
+```
+ss -tunsl | grep 53
+```
